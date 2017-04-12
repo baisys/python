@@ -159,3 +159,7 @@ list是一个可变的有序表，所以，可以往list中追加元素到末尾
 >>> name
 
 ['zhang', 'hou', 'wang', 'situ']
+
+list元素也可以是另一个list
+
+>>> s = ['python', 'java', ['asp', 'php'], 'scheme']
