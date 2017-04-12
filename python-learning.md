@@ -13,10 +13,15 @@ print也可以打印整数，或者计算结果
 Python的语法比较简单，采用缩进方式（按照约定俗成的管理，应该始终坚持使用4个空格的缩进），比如
 
 #bai
+
 a = 7
+
 if a>0:
+
     print a
+    
 else:
+
     print -a
 
 Python程序是大小写敏感的
@@ -73,16 +78,22 @@ unicode应运而生。Unicode把所有语言都统一到一套编码里，这样
 Python提供了ord()和chr()函数，可以把字母和对应的数字相互转换
 
 Python在后来添加了对Unicode的支持，以Unicode表示的字符串用u'...'表示
+
 >>>print u'白'
+
 >>>u'白'.encode('utf-8')
+
 >>>'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
 
 由于Python源代码也是一个文本文件，所以，当你的源代码中包含中文的时候，在保存源代码时，就需要务必指定保存为UTF-8编码。
 当Python解释器读取源代码时，为了让它按UTF-8编码读取，我们通常在文件开头写上这两行：
 
 #!/usr/bin/env python
+
 # -*- coding: utf-8 -*-
+
 第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；
+
 第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。
 
 如果你使用Notepad++进行编辑，除了要加上# -*- coding: utf-8 -*-外，中文字符串必须是Unicode字符串
@@ -90,6 +101,7 @@ Python在后来添加了对Unicode的支持，以Unicode表示的字符串用u'.
 申明了UTF-8编码并不意味着你的.py文件就是UTF-8编码的，必须并且要确保Notepad++正在使用UTF-8 without BOM编码
 
 在Python中，采用的格式化方式和C语言是一致的，用%实现
+
 >>>print 'hi %s, I konw you have $%d' % ('hou',1000)
 
 %运算符就是用来格式化字符串的。在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，
@@ -103,36 +115,47 @@ Python在后来添加了对Unicode的支持，以Unicode表示的字符串用u'.
 *Python 2.x版本虽然支持Unicode，但在语法上需要'xxx'和u'xxx'两种字符串表示方式。
 
 Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。
+
 >>> name = ['zhang','wang','li']
 
 访问第一个元素是0不是1
+
 >>>name[0]
 
 当索引超出了范围时，Python会报一个IndexError错误，所以，要确保索引不要越界，记得最后一个元素的索引是len(classmates) - 1。
 如果要取最后一个元素，除了计算索引位置外，还可以用-1做索引，直接获取最后一个元素,-2就是倒数第二个：
+
 >>>name[-1]
 
 
 list是一个可变的有序表，所以，可以往list中追加元素到末尾：
+
 >>> name.insert(1,'hou')
+
 >>> name
 
 ['zhang', 'hou', 'wang', 'li']
+
 >>> name.append('zhao')
+
 >>> name
 
 ['zhang', 'hou', 'wang', 'li', 'zhao']
 
 要删除list末尾的元素，用pop()方法，要删除指定位置的元素，用pop(i)方法，其中i是索引位置：
+
 >>> name.pop()
 
 'zhao'
+
 >>> name
 
 ['zhang', 'hou', 'wang', 'li']
 
 要把某个元素替换成别的元素，可以直接赋值给对应的索引位置：
+
 >>> name[3] = 'situ'
+
 >>> name
 
 ['zhang', 'hou', 'wang', 'situ']
