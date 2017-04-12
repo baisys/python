@@ -79,6 +79,7 @@ Python在后来添加了对Unicode的支持，以Unicode表示的字符串用u'.
 
 由于Python源代码也是一个文本文件，所以，当你的源代码中包含中文的时候，在保存源代码时，就需要务必指定保存为UTF-8编码。
 当Python解释器读取源代码时，为了让它按UTF-8编码读取，我们通常在文件开头写上这两行：
+
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；
@@ -93,6 +94,7 @@ Python在后来添加了对Unicode的支持，以Unicode表示的字符串用u'.
 
 %运算符就是用来格式化字符串的。在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，
 后面就跟几个变量或者值，顺序要对应好。如果只有一个%?，括号可以省略。
+
 %d	整数
 %f	浮点数
 %s	字符串
@@ -102,27 +104,35 @@ Python在后来添加了对Unicode的支持，以Unicode表示的字符串用u'.
 
 Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。
 >>> name = ['zhang','wang','li']
+
 访问第一个元素是0不是1
 >>>name[0]
+
 当索引超出了范围时，Python会报一个IndexError错误，所以，要确保索引不要越界，记得最后一个元素的索引是len(classmates) - 1。
 如果要取最后一个元素，除了计算索引位置外，还可以用-1做索引，直接获取最后一个元素,-2就是倒数第二个：
 >>>name[-1]
 
+
 list是一个可变的有序表，所以，可以往list中追加元素到末尾：
 >>> name.insert(1,'hou')
 >>> name
+
 ['zhang', 'hou', 'wang', 'li']
 >>> name.append('zhao')
 >>> name
+
 ['zhang', 'hou', 'wang', 'li', 'zhao']
 
 要删除list末尾的元素，用pop()方法，要删除指定位置的元素，用pop(i)方法，其中i是索引位置：
 >>> name.pop()
+
 'zhao'
 >>> name
+
 ['zhang', 'hou', 'wang', 'li']
 
 要把某个元素替换成别的元素，可以直接赋值给对应的索引位置：
 >>> name[3] = 'situ'
 >>> name
+
 ['zhang', 'hou', 'wang', 'situ']
