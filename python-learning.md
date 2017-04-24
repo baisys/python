@@ -166,4 +166,24 @@ list元素也可以是另一个list
 
 条件判断和循环：if语句执行有个特点，它是从上往下判断，如果在某个判断上是True，把该判断对应的语句执行后，就忽略掉剩下的elif和else
 
+if判断条件还可以简写，只要x是非零数值，非空字符串，非空list，就判断为true,否则为False
 
+>>>if x:
+>>>     print "True"
+
+Python的循环有两种，一种是for...in循环，依次把list或tuple中的每个元素迭代出来
+
+>>>names = ['li','wang','ou']
+>>>for name in names:
+>>>    print name
+
+所以for x in ...循环就是把每个元素代入变量x，然后执行缩进块的语句。
+
+Python提供一个range()函数，可以生成一个整数序列，比如range(5)生成的序列是从0开始小于5的整数,如下为0-100整数的和
+
+>>>sum = 0
+>>>for x in range (101):
+>>>    sum =sum+x
+>>>print sum
+
+第二种循环是while循环，只要条件满足，就不断循环，条件不满足时退出循环
