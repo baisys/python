@@ -187,3 +187,6 @@ Python提供一个range()函数，可以生成一个整数序列，比如range(5
 >>>print sum
 
 第二种循环是while循环，只要条件满足，就不断循环，条件不满足时退出循环
+
+set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。
+
